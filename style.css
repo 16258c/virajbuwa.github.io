@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    background: #080808;
+    color: #fff;
+
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/myback.jpeg);
+    background-size: cover;
+    background-position: right;
+
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.logo {
+    width: 150px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #FFDF00;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.55s;
+
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+
+
+
+}
+
+.header-text h1 span {
+    color: #FFDF00;
+
+}
+
+/* ----------about----------*/
+
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #FFDF00;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+
+
+}
+
+.tab-contents ul li span {
+    color: #f2dc52;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+
+}
+
+/*------services------------*/
+
+#services {
+    padding: 30px 0;
+
+
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: 0.5s, transform 0.5s;
+
+}
+
+.services-list div:hover {
+    background: #73701c;
+    transform: translateY(-10px);
+
+}
+
+/*---------------recent----------------*/
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: center;
+    overflow: hidden;
+}
+
+.work img {
+
+    width: relative;
+    border-radius: 10px;
+
+}
+
+
+
+
+/*-------------- portfolio------------*/
+#portfolio {
+    padding: 50px o;
+}
+
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+
+.layer {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(#bacf15);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+
+}
+
+.work:hover.layer {
+    height: 100%;
+
+}
+
+#latest {
+    padding: 30px 0;
+}
+
+
+.video-container {
+    position: center;
+    width: 100%;
+    height: 1000px;
+    /* Adjust the height as needed */
+}
+
+.slides-container {
+    position: center;
+    width: 100%;
+    /* Add margin or padding to adjust the position of slides */
+}
+
+.back-video {
+    position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the video covers the entire container */
+    z-index: -1;
+    /* Places the video behind other content */
+}
+
+/*slider*/
+body {
+    padding: 10px;
+    left: 100px;
+    right: 100px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    width: 100%;
+    /* Adjust the width of the slider container */
+    max-width: 1200px;
+    /* Set a maximum width for the slider */
+    margin: 0 auto;
+    /* Center the slider horizontally */
+    overflow: hidden;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.2s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Add animation for sliding */
+@keyframes slideAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Styles for dots */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: rgb(179, 209, 29);
+}
+
+/*--------------------------------------------*/
+
+.description {
+    margin-top: 30px;
+    /* Adjust the top margin as needed */
+}
+
+.description {
+    margin-top: 30px;
+    /* Adjust the top margin as needed */
+}
+
+
+
+/*-----------contact-----------*/
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    background-color: #323131;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cbd035;
+    color: #81a52d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #d71212;
+}
+
+#msg {
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
+}
+
+
+/*-------css for small-----------*/
+@media only screen and (max-device-width: 600px) {
+    #header {
+        background-image: url(images/css.png);
+    }
+
+
+    .header-text p {
+        font-size: 20px;
+        /* Adjust the font size of the paragraph */
+    }
+
+    .header-text h1 {
+        font-size: 48px;
+        /* Adjust the font size of the heading */
+    }
+
+    .header-text span {
+        font-size: 48px;
+        /* Adjust the font size of the span within the heading */
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .about-col-1 img {
+            width: 285%;
+            /* Adjust the width of the image for smaller screens */
+            max-width: none;
+            /* Remove the maximum width constraint */
+            height: auto;
+            /* Let the height adjust automatically based on the width */
+        }
+    }
+
+    /* Adjust styles for iPhones */
+    body {
+        font-size: 12px;
+        /* Example: Decrease font size for better readability */
+        line-height: 1.4;
+        /* Example: Adjust line height for better spacing */
+    }
+
+    .container {
+        padding: 10px;
+        /* Example: Decrease padding for better use of space */
+    }
+
+
+}
